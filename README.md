@@ -4,7 +4,6 @@ Artist portfolio site
 <!DOCTYPE html>
 <html>
 <head>
-    <title>numa nadine</title>
     <style>
         body {
             font-family: Times New Roman, sans-serif;
