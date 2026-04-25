@@ -13,7 +13,7 @@ Artist portfolio site
     </style>
 </head>
 <body>
-    <h1>Welcome to My Website!</h1>
-    <p>portfolio. under construction.</p>
+    <h1>portfolio</h1>
+    <p>under construction.</p>
 </body>
 </html>
