@@ -1,9 +1,10 @@
 # numanadine
 Artist portfolio site
+
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Website</title>
+    <title>numa nadine</title>
     <style>
         body {
             font-family: Times New Roman, sans-serif;
@@ -13,6 +14,6 @@ Artist portfolio site
 </head>
 <body>
     <h1>Welcome to My Website!</h1>
-    <p>Portfolio. Under construction.</p>
+    <p>portfolio. under construction.</p>
 </body>
 </html>
