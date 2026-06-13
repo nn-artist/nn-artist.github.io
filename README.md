@@ -16,3 +16,39 @@ Artist portfolio site
     <p>under construction.</p>
 </body>
 </html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Times New Roman, sans-serif;
+            margin: 50px;
+        }
+        nav {
+            margin-bottom: 30px;
+        }
+        nav a {
+            margin-right: 20px;
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    
+    <h1>portfolio</h1>
+    <p>under construction.</p>
+</body>
+</html>
