@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Artist Portfolio</title>
+    <title>Print Club - Artist Portfolio</title>
     <style>
         * {
             margin: 0;
@@ -89,74 +89,58 @@
             text-align: center;
         }
 
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-            margin-top: 3rem;
-        }
-
-        .about-image {
-            width: 100%;
-            border-radius: 5px;
-            overflow: hidden;
-        }
-
-        .about-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .about-text p {
-            margin-bottom: 1.5rem;
-            color: var(--text-light);
-            font-size: 1.05rem;
-        }
-
-        .btn {
-            padding: 12px 30px;
-            background: var(--primary);
-            color: white;
-            border: 2px solid var(--primary);
-            text-decoration: none;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: var(--transition);
-            border-radius: 3px;
-            display: inline-block;
-            margin-top: 1rem;
-        }
-
-        .btn:hover {
-            background: var(--accent);
-            border-color: var(--accent);
-        }
-
-        .testimonials-grid {
+        .portfolio-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
         }
 
-        .testimonial {
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 1;
             background: var(--light-bg);
-            padding: 2rem;
             border-radius: 5px;
-            border-left: 4px solid var(--accent);
+            cursor: pointer;
+            transition: var(--transition);
         }
 
-        .testimonial p {
-            font-style: italic;
-            color: var(--text-light);
-            margin-bottom: 1rem;
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
         }
 
-        .testimonial-author {
-            font-weight: bold;
-            color: var(--primary);
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(180deg, transparent, rgba(0,0,0,0.8));
+            color: white;
+            padding: 2rem;
+            transform: translateY(100%);
+            transition: var(--transition);
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+            transform: translateY(0);
+        }
+
+        .portfolio-overlay h4 {
+            color: white;
+            margin-bottom: 0.5rem;
         }
 
         footer {
@@ -189,10 +173,6 @@
                 display: none;
             }
 
-            .about-content {
-                grid-template-columns: 1fr;
-            }
-
             .container {
                 padding: 0 20px;
             }
@@ -215,36 +195,49 @@
 
     <section>
         <div class="container">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="https://via.placeholder.com/400x500?text=About+Photo" alt="About">
+            <h2>Print Club Collection</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/400x400?text=Print+1" alt="Print 1">
+                    <div class="portfolio-overlay">
+                        <h4>Print Title</h4>
+                        <p>Limited edition print</p>
+                    </div>
                 </div>
-                <div class="about-text">
-                    <p>I'm an artist passionate about creating meaningful work that resonates with people. My journey in art has been shaped by diverse influences and a deep commitment to craft.</p>
-                    <p>Through years of practice and experimentation, I've developed a unique style that blends traditional techniques with contemporary themes. Each piece tells a story and invites viewers into my creative world.</p>
-                    <p>I believe art has the power to transform spaces, inspire conversations, and connect us to our emotions. Whether through commissions or exhibitions, I'm dedicated to creating work that matters.</p>
-                    <a href="contact.html" class="btn">Get In Touch</a>
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/400x400?text=Print+2" alt="Print 2">
+                    <div class="portfolio-overlay">
+                        <h4>Print Title</h4>
+                        <p>Limited edition print</p>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <div class="container">
-            <h2>What People Say</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial">
-                    <p>"Working with them was an incredible experience. Their creativity and attention to detail transformed my vision into something even more beautiful than I imagined."</p>
-                    <div class="testimonial-author">— Client Name, Gallery Owner</div>
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/400x400?text=Print+3" alt="Print 3">
+                    <div class="portfolio-overlay">
+                        <h4>Print Title</h4>
+                        <p>Limited edition print</p>
+                    </div>
                 </div>
-                <div class="testimonial">
-                    <p>"The quality of their work is exceptional. They bring such passion and professionalism to every project. I couldn't recommend them more highly."</p>
-                    <div class="testimonial-author">— Client Name, Art Collector</div>
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/400x400?text=Print+4" alt="Print 4">
+                    <div class="portfolio-overlay">
+                        <h4>Print Title</h4>
+                        <p>Limited edition print</p>
+                    </div>
                 </div>
-                <div class="testimonial">
-                    <p>"Their art speaks for itself. It's rare to find an artist so dedicated to their craft and so genuinely interested in creating meaningful work."</p>
-                    <div class="testimonial-author">— Client Name, Museum Director</div>
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/400x400?text=Print+5" alt="Print 5">
+                    <div class="portfolio-overlay">
+                        <h4>Print Title</h4>
+                        <p>Limited edition print</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/400x400?text=Print+6" alt="Print 6">
+                    <div class="portfolio-overlay">
+                        <h4>Print Title</h4>
+                        <p>Limited edition print</p>
+                    </div>
                 </div>
             </div>
         </div>
