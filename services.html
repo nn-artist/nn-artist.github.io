@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Artist Portfolio</title>
+    <title>Services - Artist Portfolio</title>
     <style>
         * {
             margin: 0;
@@ -87,74 +87,32 @@
             text-align: center;
         }
 
-        .about-content {
+        .services-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 3rem;
-            align-items: center;
             margin-top: 3rem;
         }
 
-        .about-image {
-            width: 100%;
-            border-radius: 5px;
-            overflow: hidden;
-        }
-
-        .about-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .about-text p {
-            margin-bottom: 1.5rem;
-            color: var(--text-light);
-            font-size: 1.05rem;
-        }
-
-        .btn {
-            padding: 12px 30px;
-            background: var(--primary);
-            color: white;
-            border: 2px solid var(--primary);
-            text-decoration: none;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: var(--transition);
-            border-radius: 3px;
-            display: inline-block;
-            margin-top: 1rem;
-        }
-
-        .btn:hover {
-            background: var(--accent);
-            border-color: var(--accent);
-        }
-
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .testimonial {
-            background: var(--light-bg);
+        .service-card {
+            text-align: center;
             padding: 2rem;
-            border-radius: 5px;
-            border-left: 4px solid var(--accent);
         }
 
-        .testimonial p {
-            font-style: italic;
-            color: var(--text-light);
+        .service-icon {
+            font-size: 3rem;
             margin-bottom: 1rem;
         }
 
-        .testimonial-author {
-            font-weight: bold;
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
             color: var(--primary);
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            line-height: 1.8;
         }
 
         footer {
@@ -187,10 +145,6 @@
                 display: none;
             }
 
-            .about-content {
-                grid-template-columns: 1fr;
-            }
-
             .container {
                 padding: 0 20px;
             }
@@ -213,36 +167,22 @@
 
     <section>
         <div class="container">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="https://via.placeholder.com/400x500?text=About+Photo" alt="About">
+            <h2>What I Do</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3>Original Art</h3>
+                    <p>Custom pieces created specifically for you. Each work is one-of-a-kind and tailored to your vision and style preferences.</p>
                 </div>
-                <div class="about-text">
-                    <p>I'm an artist passionate about creating meaningful work that resonates with people. My journey in art has been shaped by diverse influences and a deep commitment to craft.</p>
-                    <p>Through years of practice and experimentation, I've developed a unique style that blends traditional techniques with contemporary themes. Each piece tells a story and invites viewers into my creative world.</p>
-                    <p>I believe art has the power to transform spaces, inspire conversations, and connect us to our emotions. Whether through commissions or exhibitions, I'm dedicated to creating work that matters.</p>
-                    <a href="contact.html" class="btn">Work With Me</a>
+                <div class="service-card">
+                    <div class="service-icon">✨</div>
+                    <h3>Commissions</h3>
+                    <p>Work with me on a bespoke project. I collaborate closely with clients to bring their creative ideas to beautiful, tangible reality.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <div class="container">
-            <h2>What People Say</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial">
-                    <p>"Working with them was an incredible experience. Their creativity and attention to detail transformed my vision into something even more beautiful than I imagined."</p>
-                    <div class="testimonial-author">— Client Name, Gallery Owner</div>
-                </div>
-                <div class="testimonial">
-                    <p>"The quality of their work is exceptional. They bring such passion and professionalism to every project. I couldn't recommend them more highly."</p>
-                    <div class="testimonial-author">— Client Name, Art Collector</div>
-                </div>
-                <div class="testimonial">
-                    <p>"Their art speaks for itself. It's rare to find an artist so dedicated to their craft and so genuinely interested in creating meaningful work."</p>
-                    <div class="testimonial-author">— Client Name, Museum Director</div>
+                <div class="service-card">
+                    <div class="service-icon">🖼️</div>
+                    <h3>Exhibitions</h3>
+                    <p>Featured in galleries and art shows. My work has been displayed at prestigious venues and art events around the city.</p>
                 </div>
             </div>
         </div>
